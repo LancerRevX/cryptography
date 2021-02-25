@@ -1,0 +1,6 @@
+*.zip
+ciphers/CMakeLists.txt.user*
+ciphers/build*
+gui/gui.pro.user
+gui/gui.user
+gui/build*
