@@ -14,6 +14,8 @@ public:
 
 private slots:
 
+    void on_polybiusSquareButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

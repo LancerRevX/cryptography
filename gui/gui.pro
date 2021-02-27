@@ -14,16 +14,19 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     tabs/atbashtab.cpp \
+    tabs/polybiussquare.cpp \
     tabs/scytaletab.cpp
 
 HEADERS += \
     mainwindow.h \
     tabs/atbashtab.hpp \
+    tabs/polybiussquare.hpp \
     tabs/scytaletab.hpp
 
 FORMS += \
     mainwindow.ui \
     tabs/atbashtab.ui \
+    tabs/polybiussquare.ui \
     tabs/scytaletab.ui
 
 # Default rules for deployment.
