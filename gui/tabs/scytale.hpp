@@ -3,16 +3,16 @@
 #include <QWidget>
 
 namespace Ui {
-    class ScytaleTab;
+    class Scytale;
 }
 
-class ScytaleTab : public QWidget
+class Scytale : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit ScytaleTab(QWidget* parent = nullptr);
-    ~ScytaleTab();
+    explicit Scytale(QWidget* parent = nullptr);
+    ~Scytale();
 
 private slots:
     void on_messageEdit_textChanged();
@@ -25,6 +25,6 @@ private:
     void encodeMessage();
     void decodeMessage();
 
-    Ui::ScytaleTab *ui;
+    Ui::Scytale *ui;
 };
 

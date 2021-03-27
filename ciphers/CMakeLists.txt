@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(ciphers STATIC
     atbash.cpp
     scytale.cpp
+    polybiussquare.cpp
     ciphers.hpp
 )
 

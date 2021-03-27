@@ -13,8 +13,10 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_polybiusSquareButton_clicked();
+    void on_atbashButton_clicked();
+
+    void on_scytaleButton_clicked();
 
 private:
     Ui::MainWindow* ui;

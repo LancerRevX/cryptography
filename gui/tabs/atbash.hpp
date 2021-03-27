@@ -4,16 +4,16 @@
 #include <QWidget>
 
 namespace Ui {
-class AtbashTab;
+class Atbash;
 }
 
-class AtbashTab : public QWidget
+class Atbash : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit AtbashTab(QWidget* parent = nullptr);
-    ~AtbashTab();
+    explicit Atbash(QWidget* parent = nullptr);
+    ~Atbash();
 
 signals:
     void message(const QString& message, int timeout = 0);
@@ -23,7 +23,7 @@ private slots:
     void on_switchButton_clicked();
 
 private:
-    Ui::AtbashTab* ui;
+    Ui::Atbash* ui;
 };
 
 #endif // ATBASHTAB_H

@@ -1,5 +1,5 @@
-#include "atbashtab.hpp"
-#include "ui_atbashtab.h"
+#include "atbash.hpp"
+#include "ui_atbash.h"
 
 #include <ciphers.hpp>
 
@@ -7,16 +7,16 @@
 #include <QMessageBox>
 #include <QDebug>
 
-AtbashTab::AtbashTab(QWidget* parent) : QWidget(parent), ui(new Ui::AtbashTab) {
+Atbash::Atbash(QWidget* parent) : QWidget(parent), ui(new Ui::Atbash) {
     ui->setupUi(this);
 //    ui->messageEdit->setValidator(new QRegExpValidator(QRegExp("^[а-яёА-ЯЁa-zA-Z .,!?]+$")));
 }
 
-AtbashTab::~AtbashTab() {
+Atbash::~Atbash() {
     delete ui;
 }
 
-void AtbashTab::on_messageEdit_textChanged() {
+void Atbash::on_messageEdit_textChanged() {
     auto message = ui->messageEdit->toPlainText();
     if (message.isEmpty()) {
         ui->codeEdit->setText("");
@@ -32,6 +32,6 @@ void AtbashTab::on_messageEdit_textChanged() {
 
 }
 
-void AtbashTab::on_switchButton_clicked() {
+void Atbash::on_switchButton_clicked() {
     ui->messageEdit->setText(ui->codeEdit->toPlainText());
 }

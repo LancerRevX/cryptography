@@ -1,12 +1,12 @@
-#include "scytaletab.hpp"
-#include "ui_scytaletab.h"
+#include "scytale.hpp"
+#include "ui_scytale.h"
 
 #include <ciphers.hpp>
 
 #include <QDebug>
 #include <QMessageBox>
 
-ScytaleTab::ScytaleTab(QWidget* parent) : QWidget(parent), ui(new Ui::ScytaleTab) {
+Scytale::Scytale(QWidget* parent) : QWidget(parent), ui(new Ui::Scytale) {
     ui->setupUi(this);
     auto rodFacesNumber = ui->rodFacesEdit->value();
     auto rodCharLength = ui->rodCharLengthEdit->value();
@@ -14,36 +14,36 @@ ScytaleTab::ScytaleTab(QWidget* parent) : QWidget(parent), ui(new Ui::ScytaleTab
     ui->codeTable->setRowCount(rodFacesNumber);
 }
 
-ScytaleTab::~ScytaleTab() {
+Scytale::~Scytale() {
     delete ui;
 }
 
-void ScytaleTab::on_messageEdit_textChanged() {
+void Scytale::on_messageEdit_textChanged() {
     this->encodeMessage();
 }
 
-void ScytaleTab::on_codeEdit_textChanged() {
+void Scytale::on_codeEdit_textChanged() {
     this->decodeMessage();
 }
 
-void ScytaleTab::on_rodFacesEdit_valueChanged(int rodFacesNumber) {
+void Scytale::on_rodFacesEdit_valueChanged(int rodFacesNumber) {
     ui->codeTable->setRowCount(rodFacesNumber);
 
     this->encodeMessage();
 }
 
-void ScytaleTab::on_rodCharLengthEdit_valueChanged(int rodCharLength) {
+void Scytale::on_rodCharLengthEdit_valueChanged(int rodCharLength) {
     ui->codeTable->setColumnCount(rodCharLength);
 
     this->encodeMessage();
 }
 
-void ScytaleTab::on_switchButton_clicked() {
+void Scytale::on_switchButton_clicked() {
     ui->messageEdit->setPlainText(ui->codeEdit->toPlainText());
     this->encodeMessage();
 }
 
-void ScytaleTab::encodeMessage()
+void Scytale::encodeMessage()
 {
     auto message = ui->messageEdit->toPlainText();
     if (message.length() > (ui->rodFacesEdit->value() * ui->rodCharLengthEdit->value())) {
@@ -74,7 +74,7 @@ void ScytaleTab::encodeMessage()
     }
 }
 
-void ScytaleTab::decodeMessage() {
+void Scytale::decodeMessage() {
     auto code = ui->codeEdit->toPlainText();
     auto rodFacesNumber = ui->rodFacesEdit->value();
     auto rodCharLength = ui->rodCharLengthEdit->value();

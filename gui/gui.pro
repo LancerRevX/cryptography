@@ -13,21 +13,21 @@ TARGET = app
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    tabs/atbashtab.cpp \
+    tabs/atbash.cpp \
     tabs/polybiussquare.cpp \
-    tabs/scytaletab.cpp
+    tabs/scytale.cpp
 
 HEADERS += \
-    mainwindow.h \
-    tabs/atbashtab.hpp \
+    mainwindow.hpp \
+    tabs/atbash.hpp \
     tabs/polybiussquare.hpp \
-    tabs/scytaletab.hpp
+    tabs/scytale.hpp
 
 FORMS += \
     mainwindow.ui \
-    tabs/atbashtab.ui \
+    tabs/atbash.ui \
     tabs/polybiussquare.ui \
-    tabs/scytaletab.ui
+    tabs/scytale.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
