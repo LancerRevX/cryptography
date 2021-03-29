@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 namespace atbash {
     std::wstring encode(const std::wstring& message);
 }
@@ -45,4 +47,9 @@ namespace polybius_square {
             const std::vector<std::vector<std::wstring>>& square
         );
     }
+}
+
+namespace caesar_cipher {
+    wstring encode(wstring const& message, int key, vector<wstring> const& alphabets);
+    wstring decode(wstring const& message, int key, vector<wstring> const& alphabets);
 }

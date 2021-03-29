@@ -14,18 +14,21 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     tabs/atbash.cpp \
+    tabs/caesarcipher.cpp \
     tabs/polybiussquare.cpp \
     tabs/scytale.cpp
 
 HEADERS += \
     mainwindow.hpp \
     tabs/atbash.hpp \
+    tabs/caesarcipher.hpp \
     tabs/polybiussquare.hpp \
     tabs/scytale.hpp
 
 FORMS += \
     mainwindow.ui \
     tabs/atbash.ui \
+    tabs/caesarcipher.ui \
     tabs/polybiussquare.ui \
     tabs/scytale.ui
 

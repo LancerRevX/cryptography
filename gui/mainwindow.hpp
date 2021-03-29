@@ -18,6 +18,8 @@ private slots:
 
     void on_scytaleButton_clicked();
 
+    void on_caesarButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };
