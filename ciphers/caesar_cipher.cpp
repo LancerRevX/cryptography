@@ -1,15 +1,16 @@
 #include "ciphers.hpp"
 
 #include <algorithm>
+#include <cmath>
 
 wstring caesar_cipher::encode(wstring const& message, int key, vector<wstring> const& alphabets) {
     wstring result;
     vector<wstring> shifted_alphabets = alphabets;
     for (auto& alphabet : shifted_alphabets) {
         if (key < 0) {
-            rotate(alphabet.rbegin(), alphabet.rbegin() - key, alphabet.rend());
+            rotate(alphabet.rbegin(), alphabet.rbegin() + (abs(key) % alphabet.length()), alphabet.rend());
         } else {
-            rotate(alphabet.begin(), alphabet.begin() + key, alphabet.end());
+            rotate(alphabet.begin(), alphabet.begin() + (key % alphabet.length()), alphabet.end());
         }
     }
     for (auto symbol : message) {

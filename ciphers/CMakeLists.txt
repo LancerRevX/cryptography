@@ -11,6 +11,7 @@ add_library(ciphers STATIC
     scytale.cpp
     polybius_square.cpp
     caesar_cipher.cpp
+    cardan_grille.cpp
     ciphers.hpp
 )
 

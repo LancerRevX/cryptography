@@ -117,11 +117,8 @@
        </item>
        <item row="2" column="0">
         <widget class="QPushButton" name="pushButton">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
          <property name="text">
-          <string>Шифр Кардано</string>
+          <string>Решётка Кардано</string>
          </property>
         </widget>
        </item>
