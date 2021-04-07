@@ -71,7 +71,14 @@
        </widget>
       </item>
       <item row="1" column="0" colspan="2">
-       <widget class="QPlainTextEdit" name="messageEdit"/>
+       <widget class="QPlainTextEdit" name="messageEdit">
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -106,136 +113,6 @@
       <property name="spacing">
        <number>4</number>
       </property>
-      <item row="1" column="8">
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Случайная решётка</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QLabel" name="label_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Решётка</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="5" colspan="3">
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="3" column="3" colspan="6">
-       <widget class="QTableWidget" name="grille">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::NoSelection</enum>
-        </property>
-        <attribute name="horizontalHeaderVisible">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>8</number>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>24</number>
-        </attribute>
-        <attribute name="verticalHeaderVisible">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="verticalHeaderMinimumSectionSize">
-         <number>8</number>
-        </attribute>
-        <attribute name="verticalHeaderDefaultSectionSize">
-         <number>24</number>
-        </attribute>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Новая строка</string>
-         </property>
-        </row>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Новый столбец</string>
-         </property>
-        </column>
-       </widget>
-      </item>
       <item row="1" column="4">
        <widget class="QSpinBox" name="grilleSizeSpin">
         <property name="sizePolicy">
@@ -265,6 +142,141 @@
         <property name="value">
          <number>6</number>
         </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QPushButton" name="grilleRotateButton">
+        <property name="minimumSize">
+         <size>
+          <width>24</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>24</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>⭮</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Решётка</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="3" colspan="4">
+       <widget class="QTableWidget" name="grille">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>8</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>24</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>8</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>24</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </column>
        </widget>
       </item>
      </layout>
@@ -301,7 +313,7 @@
        <number>4</number>
       </property>
       <item row="0" column="4">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="decodeButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -315,17 +327,11 @@
       </item>
       <item row="2" column="0" colspan="5">
        <widget class="QTableWidget" name="codeTable">
-        <attribute name="horizontalHeaderVisible">
-         <bool>false</bool>
-        </attribute>
         <attribute name="horizontalHeaderMinimumSectionSize">
          <number>24</number>
         </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
          <number>24</number>
-        </attribute>
-        <attribute name="verticalHeaderVisible">
-         <bool>false</bool>
         </attribute>
         <attribute name="verticalHeaderMinimumSectionSize">
          <number>24</number>
@@ -335,62 +341,62 @@
         </attribute>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>1</string>
          </property>
         </row>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>2</string>
          </property>
         </row>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>3</string>
          </property>
         </row>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>4</string>
          </property>
         </row>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>5</string>
          </property>
         </row>
         <row>
          <property name="text">
-          <string>Новая строка</string>
+          <string>6</string>
          </property>
         </row>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>1</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>2</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>3</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>4</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>5</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Новый столбец</string>
+          <string>6</string>
          </property>
         </column>
        </widget>
@@ -494,7 +500,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="junkSwitch">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -503,12 +509,12 @@
         </property>
         <item>
          <property name="text">
-          <string>с добавлением &quot;мусора&quot;</string>
+          <string>без добавления &quot;мусора&quot;</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>без добавления &quot;мусора&quot;</string>
+          <string>с добавлением &quot;мусора&quot;</string>
          </property>
         </item>
        </widget>

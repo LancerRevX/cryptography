@@ -57,10 +57,10 @@ namespace caesar_cipher {
 namespace cardan_grille {
     class GrilleAndCodeDoNotMatch : public exception {};
     class GrilleNotSquare : public exception {};
-    class MessageLongerThanHolesNumber: public exception {};
-    class MessageLengthNotEqualToCellsNumber: public exception {};
+    class MessageLongerThanHolesNumber : public exception {};
+    class MessageLengthNotEqualToHolesNumber : public exception {};
+    class GrilleOverlaps : public exception {};
 
     vector<vector<wchar_t>> encode(wstring const& message, vector<vector<bool>> const& grille, bool junk);
-    wstring decode(vector<vector<wchar_t>> const& code, vector<vector<bool>> const& grille, bool junk);
-    vector<vector<bool>> get_random_grille(size_t size);
+    wstring decode(vector<vector<wchar_t>> const& code, vector<vector<bool>> const& grille);
 }

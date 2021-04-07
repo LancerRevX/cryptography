@@ -20,8 +20,16 @@ private slots:
 
     void on_encodeButton_clicked();
 
+
+    void on_decodeButton_clicked();
+
+    void on_codeTableSizeSpin_valueChanged(int arg1);
+
+    void on_grilleRotateButton_clicked();
+
 private:
     Ui::CardanGrille *ui;
     void updateGrille();
+    void updateCodeTable();
 };
 
