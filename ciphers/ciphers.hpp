@@ -64,3 +64,8 @@ namespace cardan_grille {
     wstring decode(vector<vector<wchar_t>> const& code, vector<vector<bool>> const& grille, bool junk);
     vector<vector<bool>> get_random_grille(size_t size);
 }
+
+namespace Richelieu {
+    wstring encode(wstring const& message, vector<vector<size_t>> const& key);
+    wstring decode(wstring const& code, vector<vector<size_t>> const& key);
+}
