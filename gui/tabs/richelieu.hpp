@@ -13,6 +13,10 @@ public:
     explicit Richelieu(QWidget *parent = nullptr);
     ~Richelieu();
 
+private slots:
+    void on_EncodeButton_clicked();
+
 private:
     Ui::Richelieu *ui;
+    std::vector<std::vector<size_t>> getKey();
 };

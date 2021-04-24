@@ -4,3 +4,4 @@ ciphers/build*
 gui/gui.pro.user
 gui/gui.user
 gui/build*
+build*

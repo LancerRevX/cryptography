@@ -43,8 +43,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L$$PWD/../ciphers/build-ciphers-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/ -lciphers
+LIBS += -L$$PWD/../ciphers/ -lciphers
 
 INCLUDEPATH += $$PWD/../ciphers
 DEPENDPATH += $$PWD/../ciphers
-PRE_TARGETDEPS += $$PWD/../ciphers/build-ciphers-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/libciphers.a
+PRE_TARGETDEPS += $$PWD/../ciphers/libciphers.a

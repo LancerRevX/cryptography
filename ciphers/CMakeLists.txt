@@ -15,5 +15,7 @@ add_library(ciphers STATIC
     richelieu.cpp
     ciphers.hpp
 )
-
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)
+
+add_executable(ciphers_tests tests/main.cpp)
+target_link_libraries(ciphers_tests gtest ciphers)
