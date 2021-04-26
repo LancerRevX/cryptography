@@ -22,6 +22,9 @@ private slots:
 
     void on_pushButton_clicked();
 
+
+    void on_albertiDiskButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

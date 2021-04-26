@@ -13,6 +13,7 @@ TARGET = app
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    tabs/albertidisk.cpp \
     tabs/richelieu.cpp \
     tabs/atbash.cpp \
     tabs/caesarcipher.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.hpp \
+    tabs/albertidisk.hpp \
     tabs/richelieu.hpp \
     tabs/atbash.hpp \
     tabs/caesarcipher.hpp \
@@ -31,6 +33,7 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui \
+    tabs/albertidisk.ui \
     tabs/richelieu.ui \
     tabs/atbash.ui \
     tabs/caesarcipher.ui \
@@ -43,8 +46,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L$$PWD/../ciphers/ -lciphers
+LIBS += -L$$PWD/../ciphers/build-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/ -lciphers
 
 INCLUDEPATH += $$PWD/../ciphers
-DEPENDPATH += $$PWD/../ciphers
-PRE_TARGETDEPS += $$PWD/../ciphers/libciphers.a
+DEPENDPATH += $$PWD/../ciphersbuild-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/
+PRE_TARGETDEPS += $$PWD/../ciphers/build-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/libciphers.a
