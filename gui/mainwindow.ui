@@ -65,9 +65,6 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="2" column="1">
         <widget class="QPushButton" name="richelieuButton">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
          <property name="text">
           <string>Шифр Ришельё</string>
          </property>

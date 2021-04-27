@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>657</width>
-    <height>300</height>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,14 @@
     </widget>
    </item>
    <item row="3" column="0">
-    <widget class="QPlainTextEdit" name="MessageEdit"/>
+    <widget class="QPlainTextEdit" name="MessageEdit">
+     <property name="font">
+      <font>
+       <family>Courier New</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+    </widget>
    </item>
    <item row="3" column="1">
     <widget class="QPushButton" name="EncodeButton">
@@ -55,7 +62,14 @@
     </widget>
    </item>
    <item row="5" column="0">
-    <widget class="QPlainTextEdit" name="CodeEdit"/>
+    <widget class="QPlainTextEdit" name="CodeEdit">
+     <property name="font">
+      <font>
+       <family>Courier New</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+    </widget>
    </item>
    <item row="4" column="0" colspan="2">
     <widget class="QLabel" name="CodeLabel">

@@ -28,11 +28,11 @@ void Richelieu::on_EncodeButton_clicked() {
     try {
         auto code = richelieu::encode(ui->MessageEdit->toPlainText().toStdWString(), key);
         ui->CodeEdit->setPlainText(QString::fromStdWString(code));
-    } catch (richelieu::KeyLongerThanMessage) {
+    } catch (richelieu::KeyLongerThanMessage&) {
         QMessageBox(QMessageBox::Warning, "Ошибка",
             "Ключ длиннее сообщения"
         ).exec();
-    } catch (richelieu::InvalidKeySegment) {
+    } catch (richelieu::InvalidKeySegment&) {
         QMessageBox(QMessageBox::Warning, "Ошибка",
             "Некорректный сегмент ключа"
         ).exec();
@@ -49,13 +49,13 @@ void Richelieu::on_DecodeButton_clicked() {
     }
 
     try {
-        auto message = richelieu::decode(ui->MessageEdit->toPlainText().toStdWString(), key);
+        auto message = richelieu::decode(ui->CodeEdit->toPlainText().toStdWString(), key);
         ui->MessageEdit->setPlainText(QString::fromStdWString(message));
-    } catch (richelieu::KeyLongerThanMessage) {
+    } catch (richelieu::KeyLongerThanMessage&) {
         QMessageBox(QMessageBox::Warning, "Ошибка",
             "Ключ длиннее сообщения"
         ).exec();
-    } catch (richelieu::InvalidKeySegment) {
+    } catch (richelieu::InvalidKeySegment&) {
         QMessageBox(QMessageBox::Warning, "Ошибка",
             "Некорректный сегмент ключа"
         ).exec();
