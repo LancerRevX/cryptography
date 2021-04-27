@@ -24,6 +24,8 @@ private slots:
 
     void on_richelieuButton_clicked();
 
+    void on_albertiDiskButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

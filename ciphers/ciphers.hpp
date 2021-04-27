@@ -72,3 +72,19 @@ namespace richelieu {
     wstring encode(wstring const& message, vector<vector<size_t>> const& key);
     wstring decode(wstring const& code, vector<vector<size_t>> const& key);
 }
+
+namespace alberti_disk {
+    class DisksDontMatch : public exception {};
+    wstring encode(
+        wstring const& message,
+        wstring const& outer_disk,
+        wstring inner_disk,
+        int spin_step
+    );
+    wstring decode(
+        wstring const& code,
+        wstring const& outer_disk,
+        wstring inner_disk,
+        int spin_step
+    );
+}

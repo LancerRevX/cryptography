@@ -13,6 +13,7 @@ TARGET = app
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    tabs/albertidisk.cpp \
     tabs/richelieu.cpp \
     tabs/atbash.cpp \
     tabs/caesarcipher.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.hpp \
+    tabs/albertidisk.hpp \
     tabs/richelieu.hpp \
     tabs/atbash.hpp \
     tabs/caesarcipher.hpp \
@@ -31,6 +33,7 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui \
+    tabs/albertidisk.ui \
     tabs/richelieu.ui \
     tabs/atbash.ui \
     tabs/caesarcipher.ui \

@@ -1,11 +1,15 @@
 #include <gtest/gtest.h>
 #include <windows.h>
 
+#include <iostream>
+
 #include "../ciphers.hpp"
 
 int main(int argc, char** argv) {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+    std::cout << iswupper(L'Ä') << std::endl;
+    std::cout << iswupper(L'ä') << std::endl;
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

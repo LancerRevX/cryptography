@@ -13,6 +13,7 @@ add_library(ciphers STATIC
     caesar_cipher.cpp
     cardan_grille.cpp
     richelieu.cpp
+    alberti_disk.cpp
     ciphers.hpp
 )
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)

@@ -7,6 +7,7 @@
 #include "tabs/caesarcipher.hpp"
 #include "tabs/cardangrille.hpp"
 #include "tabs/richelieu.hpp"
+#include "tabs/albertidisk.hpp"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     this->ui->setupUi(this);
@@ -49,6 +50,12 @@ void MainWindow::on_pushButton_clicked() {
 
 void MainWindow::on_richelieuButton_clicked() {
     auto window = new Richelieu();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_albertiDiskButton_clicked() {
+    auto window = new AlbertiDisk();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }
