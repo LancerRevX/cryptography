@@ -76,13 +76,17 @@ void CardanGrille::on_encodeButton_clicked() {
                 ui->codeTable->item(i, j)->setText(QString::fromStdWString(wstring(1, code[i][j])));
             }
         }
+    } catch (cardan_grille::MessageLengthNotEqualToGrilleSize&) {
+        QMessageBox::warning(this, "Ошибка",
+            "При шифровании без \"мусора\" длина сообщения должна быть равна количеству ячеек в решётке."
+        );
     } catch (cardan_grille::MessageLongerThanHolesNumber&) {
         QMessageBox::warning(this, "Ошибка",
             "Сообщение не может быть длиннее количества дырок в решётке, умноженного на 4."
         );
-    } catch (cardan_grille::MessageLengthNotEqualToHolesNumber&) {
+    } catch (cardan_grille::HolesNumberDoesntMatchGrilleSize&) {
         QMessageBox::warning(this, "Ошибка",
-            "При шифровании без \"мусора\" длина сообщения должна быть равна количеству дырок в решётке, умноженному на 4."
+            "При шифровании без \"мусора\" число дырок, умноженное на 4, должно быть равно количеству ячеек в решётке."
         );
     } catch (cardan_grille::GrilleOverlaps&) {
         QMessageBox::warning(this, "Ошибка",

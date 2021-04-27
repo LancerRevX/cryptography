@@ -24,6 +24,10 @@ vector<vector<wchar_t>> cardan_grille::encode(
     vector<vector<bool>> const& grille,
     bool junk
 ) {
+    if (not junk and message.length() != grille.size() * grille.size()) {
+        throw MessageLengthNotEqualToGrilleSize();
+    }
+
     size_t holes_number = 0;
     for (auto& row : grille) {
         if (row.size() != grille.size()) {
@@ -36,10 +40,10 @@ vector<vector<wchar_t>> cardan_grille::encode(
         }
     }
 
-    if (junk and message.length() > holes_number*4) {
+    if (not junk and holes_number*4 != grille.size() * grille.size()) {
+        throw HolesNumberDoesntMatchGrilleSize();
+    } else if (junk and message.length() > holes_number*4) {
         throw MessageLongerThanHolesNumber();
-    } else if (not junk and message.length() != holes_number*4) {
-        throw MessageLengthNotEqualToHolesNumber();
     }
 
     vector<vector<optional<wchar_t>>> code(grille.size());
@@ -74,9 +78,10 @@ vector<vector<wchar_t>> cardan_grille::encode(
         for (size_t j = 0; j < code[i].size(); j++) {
             if (junk and code[i][j] == nullopt) {
                 static wstring const junk_characters = L"aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ1234567890.,!? _=-+/*";
-                code[i][j] = junk_characters[rand() % junk_characters.length()];
+                result[i][j] = junk_characters[rand() % junk_characters.length()];
+            } else {
+                result[i][j] = code[i][j].value();
             }
-            result[i][j] = code[i][j].value();
         }
     }
     return result;

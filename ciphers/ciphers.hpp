@@ -58,7 +58,8 @@ namespace cardan_grille {
     class GrilleAndCodeDoNotMatch : public exception {};
     class GrilleNotSquare : public exception {};
     class MessageLongerThanHolesNumber : public exception {};
-    class MessageLengthNotEqualToHolesNumber : public exception {};
+    class HolesNumberDoesntMatchGrilleSize : public exception {};
+    class MessageLengthNotEqualToGrilleSize : public exception {};
     class GrilleOverlaps : public exception {};
 
     vector<vector<wchar_t>> encode(wstring const& message, vector<vector<bool>> const& grille, bool junk);
