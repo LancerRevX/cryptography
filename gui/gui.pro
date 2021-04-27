@@ -43,8 +43,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L$$PWD/../ciphers/ -lciphers
+LIBS += -L$$PWD/../ciphers/build-Debug/ -lciphers
 
 INCLUDEPATH += $$PWD/../ciphers
-DEPENDPATH += $$PWD/../ciphers
-PRE_TARGETDEPS += $$PWD/../ciphers/libciphers.a
+DEPENDPATH += $$PWD/../ciphers/build-Debug
+PRE_TARGETDEPS += $$PWD/../ciphers/build-Debug/libciphers.a
