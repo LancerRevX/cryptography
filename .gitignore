@@ -5,3 +5,7 @@ gui/gui.pro.user
 gui/gui.user
 gui/build*
 build*
+ciphers/matrix/*
+!ciphers/matrix/*.cpp
+!ciphers/matrix/*.hpp
+!ciphers/matrix/CMakeLists.txt
