@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Vernam</class>
+ <widget class="QWidget" name="Vernam">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Шифр Вернама</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="KeyLabel">
+     <property name="text">
+      <string>Ключ</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="KeyEdit"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="MessageLabel">
+     <property name="text">
+      <string>Исходный текст</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="MessageEdit"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="CodeLabel">
+     <property name="text">
+      <string>Шифртекст</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="CodeEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

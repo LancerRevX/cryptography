@@ -12,6 +12,7 @@
 #include "tabs/vigenere.hpp"
 #include "tabs/playfair.hpp"
 #include "tabs/hill.hpp"
+#include "tabs/vernam.hpp"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     this->ui->setupUi(this);
@@ -84,6 +85,12 @@ void MainWindow::on_PlayfairButton_clicked() {
 
 void MainWindow::on_HillButton_clicked() {
     auto window = new Hill();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_VernamButton_clicked() {
+    auto window = new Vernam();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }

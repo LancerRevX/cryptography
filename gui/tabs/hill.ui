@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Шифр Хилла</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="6" column="0" colspan="3">

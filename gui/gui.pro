@@ -23,6 +23,7 @@ SOURCES += \
     tabs/cardangrille.cpp \
     tabs/polybiussquare.cpp \
     tabs/scytale.cpp \
+    tabs/vernam.cpp \
     tabs/vigenere.cpp
 
 HEADERS += \
@@ -37,6 +38,7 @@ HEADERS += \
     tabs/cardangrille.hpp \
     tabs/polybiussquare.hpp \
     tabs/scytale.hpp \
+    tabs/vernam.hpp \
     tabs/vigenere.hpp
 
 FORMS += \
@@ -51,6 +53,7 @@ FORMS += \
     tabs/cardangrille.ui \
     tabs/polybiussquare.ui \
     tabs/scytale.ui \
+    tabs/vernam.ui \
     tabs/vigenere.ui
 
 # Default rules for deployment.

@@ -34,6 +34,8 @@ private slots:
 
     void on_HillButton_clicked();
 
+    void on_VernamButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

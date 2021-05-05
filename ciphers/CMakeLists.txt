@@ -19,6 +19,7 @@ add_library(ciphers STATIC
     playfair.cpp
     ciphers.hpp
     hill.cpp
+    vernam.cpp
 )
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)
 link_directories(matrix/)

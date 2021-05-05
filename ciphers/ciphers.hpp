@@ -138,3 +138,7 @@ namespace hill {
     wstring encode(wstring const& message, wstring const& alphabet, vector<vector<int>> const& key);
     wstring decode(wstring const& code, wstring const& alphabet, vector<vector<int>> const& key);
 }
+
+namespace vernam {
+    wstring encode(wstring const& message, wstring key);
+}
