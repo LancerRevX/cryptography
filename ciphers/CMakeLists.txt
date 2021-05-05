@@ -14,9 +14,15 @@ add_library(ciphers STATIC
     cardan_grille.cpp
     richelieu.cpp
     alberti_disk.cpp
+    gronsveld.cpp
+    vigenere.cpp
+    playfair.cpp
     ciphers.hpp
+    hill.cpp
 )
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)
+link_directories(matrix/)
+target_link_libraries(ciphers PUBLIC C:/Users/nikit/Documents/Projects/cryptography/ciphers/matrix/libmatrix.a)
 
 include(FetchContent)
 FetchContent_Declare(

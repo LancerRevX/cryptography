@@ -14,39 +14,51 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     tabs/albertidisk.cpp \
+    tabs/gronsveld.cpp \
+    tabs/hill.cpp \
+    tabs/playfair.cpp \
     tabs/richelieu.cpp \
     tabs/atbash.cpp \
     tabs/caesarcipher.cpp \
     tabs/cardangrille.cpp \
     tabs/polybiussquare.cpp \
-    tabs/scytale.cpp
+    tabs/scytale.cpp \
+    tabs/vigenere.cpp
 
 HEADERS += \
     mainwindow.hpp \
     tabs/albertidisk.hpp \
+    tabs/gronsveld.hpp \
+    tabs/hill.hpp \
+    tabs/playfair.hpp \
     tabs/richelieu.hpp \
     tabs/atbash.hpp \
     tabs/caesarcipher.hpp \
     tabs/cardangrille.hpp \
     tabs/polybiussquare.hpp \
-    tabs/scytale.hpp
+    tabs/scytale.hpp \
+    tabs/vigenere.hpp
 
 FORMS += \
     mainwindow.ui \
     tabs/albertidisk.ui \
+    tabs/gronsveld.ui \
+    tabs/hill.ui \
+    tabs/playfair.ui \
     tabs/richelieu.ui \
     tabs/atbash.ui \
     tabs/caesarcipher.ui \
     tabs/cardangrille.ui \
     tabs/polybiussquare.ui \
-    tabs/scytale.ui
+    tabs/scytale.ui \
+    tabs/vigenere.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L$$PWD/../ciphers/build-Debug/ -lciphers
+LIBS += -L$$PWD/../ciphers/build-Debug/ -L$$PWD/../ciphers/matrix/ -lciphers -lmatrix
 
 INCLUDEPATH += $$PWD/../ciphers
 DEPENDPATH += $$PWD/../ciphers/build-Debug

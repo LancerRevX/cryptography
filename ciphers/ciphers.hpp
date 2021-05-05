@@ -89,3 +89,52 @@ namespace alberti_disk {
         int spin_step
     );
 }
+
+namespace gronsveld {
+    class InvalidKey : public exception {};
+
+    wstring encode(wstring const& message, vector<wstring> const& alphabets, vector<size_t> key);
+    wstring decode(wstring const& code, vector<wstring> const& alphabets, vector<size_t> key);
+}
+
+namespace vigenere {
+    class InvalidKey : public exception {};
+
+    wstring encode(wstring const& message, wstring const& alphabet, wstring key);
+    wstring decode(wstring const& code, wstring const& alphabet, wstring key);
+}
+
+namespace playfair {
+    class InvalidAlphabet : public exception {};
+    class InvalidMessage : public exception {};
+    class InvalidKey : public exception {};
+    class InvalidStub : public exception {};
+
+    vector<vector<wstring>> get_encoding_matrix(
+        vector<vector<wstring>> const& alphabet,
+        wstring key
+    );
+    vector<pair<wchar_t, wchar_t>> get_digrams(wstring const& message, wchar_t stub);
+    wstring encode(
+        wstring message,
+        vector<vector<wstring>> const& alphabet,
+        wstring key,
+        wchar_t stub
+    );
+    wstring decode(
+        wstring code,
+        vector<vector<wstring>> const& alphabet,
+        wstring const& key,
+        wchar_t stub
+    );
+}
+
+namespace hill {
+    class InvalidMessage : public exception {};
+    class InvalidAlphabet : public exception {};
+    class InvalidKey : public exception {};
+    class KeyIsNotInvertible : public exception {};
+
+    wstring encode(wstring const& message, wstring const& alphabet, vector<vector<int>> const& key);
+    wstring decode(wstring const& code, wstring const& alphabet, vector<vector<int>> const& key);
+}

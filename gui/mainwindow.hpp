@@ -26,6 +26,14 @@ private slots:
 
     void on_albertiDiskButton_clicked();
 
+    void on_GronsveldButton_clicked();
+
+    void on_VigenereButton_clicked();
+
+    void on_PlayfairButton_clicked();
+
+    void on_HillButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

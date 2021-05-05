@@ -8,10 +8,13 @@
 #include "tabs/cardangrille.hpp"
 #include "tabs/richelieu.hpp"
 #include "tabs/albertidisk.hpp"
+#include "tabs/gronsveld.hpp"
+#include "tabs/vigenere.hpp"
+#include "tabs/playfair.hpp"
+#include "tabs/hill.hpp"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     this->ui->setupUi(this);
-//    this->on_polybiusSquareButton_clicked();
 }
 
 MainWindow::~MainWindow() {
@@ -56,6 +59,31 @@ void MainWindow::on_richelieuButton_clicked() {
 
 void MainWindow::on_albertiDiskButton_clicked() {
     auto window = new AlbertiDisk();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_GronsveldButton_clicked() {
+    auto window = new Gronsveld();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_VigenereButton_clicked() {
+    auto window = new Vigenere();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+
+void MainWindow::on_PlayfairButton_clicked() {
+    auto window = new Playfair();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_HillButton_clicked() {
+    auto window = new Hill();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }
