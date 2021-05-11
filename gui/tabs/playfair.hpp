@@ -28,6 +28,8 @@ private slots:
 
     void on_DecodeButton_clicked();
 
+    void on_RussianAlphabet8x4Button_clicked();
+
 private:
     Ui::Playfair *ui;
 };

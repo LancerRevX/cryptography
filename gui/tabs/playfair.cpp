@@ -179,3 +179,25 @@ void Playfair::on_DecodeButton_clicked() {
         ).exec();
     }
 }
+
+void Playfair::on_RussianAlphabet8x4Button_clicked()
+{
+    static QVector<QVector<QString>> const russian_alphabet {
+        {"А", "Б", "В", "Г"},
+        {"Д", "ЕЁ", "Ж", "З"},
+        {"И", "Й", "К", "Л"},
+        {"М", "Н", "О", "П"},
+        {"Р", "С", "Т", "У"},
+        {"Ф", "Х", "Ц", "Ч"},
+        {"Ш", "Щ", "Ъ", "Ы"},
+        {"Ь", "Э", "Ю", "Я"}
+    };
+    ui->AlphabetHeightSpin->setValue(russian_alphabet.size());
+    ui->AlphabetWidthSpin->setValue(russian_alphabet[0].size());
+    for (int i {0}; i < russian_alphabet.size(); i++) {
+        for (int j {0}; j < russian_alphabet[i].size(); j++) {
+            ui->AlphabetTable->setItem(i, j, new QTableWidgetItem(russian_alphabet[i][j]));
+        }
+    }
+    ui->StubEdit->setText("Ы");
+}

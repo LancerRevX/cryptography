@@ -117,7 +117,14 @@
          <item>
           <widget class="QPushButton" name="RussianAlphabetButton">
            <property name="text">
-            <string>Русский</string>
+            <string>Русский 4х8</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="RussianAlphabet8x4Button">
+           <property name="text">
+            <string>Русский 8х4</string>
            </property>
           </widget>
          </item>
