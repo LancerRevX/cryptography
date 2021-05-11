@@ -14,6 +14,8 @@
 #include "tabs/hill.hpp"
 #include "tabs/vernam.hpp"
 
+#include "tabs/frequency_analysis/frequency_analysis.hpp"
+
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     this->ui->setupUi(this);
 }
@@ -91,6 +93,13 @@ void MainWindow::on_HillButton_clicked() {
 
 void MainWindow::on_VernamButton_clicked() {
     auto window = new Vernam();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_FrequencyAnalysisButton_clicked()
+{
+    auto window = new FrequencyAnalysis();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }

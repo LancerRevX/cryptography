@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,6 +14,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     tabs/albertidisk.cpp \
+    tabs/frequency_analysis/frequency_analysis.cpp \
+    tabs/frequency_analysis/symbols_table_model.cpp \
     tabs/gronsveld.cpp \
     tabs/hill.cpp \
     tabs/playfair.cpp \
@@ -29,6 +31,8 @@ SOURCES += \
 HEADERS += \
     mainwindow.hpp \
     tabs/albertidisk.hpp \
+    tabs/frequency_analysis/frequency_analysis.hpp \
+    tabs/frequency_analysis/symbols_table_model.hpp \
     tabs/gronsveld.hpp \
     tabs/hill.hpp \
     tabs/playfair.hpp \
@@ -44,6 +48,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui \
     tabs/albertidisk.ui \
+    tabs/frequency_analysis/frequency_analysis.ui \
     tabs/gronsveld.ui \
     tabs/hill.ui \
     tabs/playfair.ui \

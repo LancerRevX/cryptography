@@ -10,26 +10,8 @@
     <x>0</x>
     <y>0</y>
     <width>512</width>
-    <height>256</height>
+    <height>343</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>512</width>
-    <height>256</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>512</width>
-    <height>256</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Н.А.Киренков, КИ17-01</string>
@@ -58,7 +40,23 @@
      <number>16</number>
     </property>
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="CryptoanalysisGroupBox">
+      <property name="title">
+       <string>Криптоанализ</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="FrequencyAnalysisButton">
+         <property name="text">
+          <string>Частотный анализ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="SymmetricCiphersGroupBox">
       <property name="title">
        <string>Симметричные шифры</string>
       </property>

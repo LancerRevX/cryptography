@@ -36,6 +36,8 @@ private slots:
 
     void on_VernamButton_clicked();
 
+    void on_FrequencyAnalysisButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };
