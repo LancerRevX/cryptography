@@ -13,6 +13,7 @@
 #include "tabs/playfair.hpp"
 #include "tabs/hill.hpp"
 #include "tabs/vernam.hpp"
+#include "tabs/xorcipher.hpp"
 
 #include "tabs/frequency_analysis/frequency_analysis.hpp"
 
@@ -100,6 +101,13 @@ void MainWindow::on_VernamButton_clicked() {
 void MainWindow::on_FrequencyAnalysisButton_clicked()
 {
     auto window = new FrequencyAnalysis();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_xorCipherButton_clicked()
+{
+    auto window = new XorCipher();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }

@@ -26,7 +26,8 @@ SOURCES += \
     tabs/polybiussquare.cpp \
     tabs/scytale.cpp \
     tabs/vernam.cpp \
-    tabs/vigenere.cpp
+    tabs/vigenere.cpp \
+    tabs/xorcipher.cpp
 
 HEADERS += \
     mainwindow.hpp \
@@ -43,7 +44,8 @@ HEADERS += \
     tabs/polybiussquare.hpp \
     tabs/scytale.hpp \
     tabs/vernam.hpp \
-    tabs/vigenere.hpp
+    tabs/vigenere.hpp \
+    tabs/xorcipher.hpp
 
 FORMS += \
     mainwindow.ui \
@@ -59,15 +61,16 @@ FORMS += \
     tabs/polybiussquare.ui \
     tabs/scytale.ui \
     tabs/vernam.ui \
-    tabs/vigenere.ui
+    tabs/vigenere.ui \
+    tabs/xorcipher.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L$$PWD/../ciphers/build-Debug/ -L$$PWD/../ciphers/matrix/ -lciphers -lmatrix
+LIBS += -L$$PWD/../ciphers/build-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/ -L$$PWD/../ciphers/matrix/ -lciphers -lmatrix
 
 INCLUDEPATH += $$PWD/../ciphers
-DEPENDPATH += $$PWD/../ciphers/build-Debug
-PRE_TARGETDEPS += $$PWD/../ciphers/build-Debug/libciphers.a
+DEPENDPATH += $$PWD/../ciphers/build-Desktop_Qt_5_15_2_MinGW_64_bit-Debug
+PRE_TARGETDEPS += $$PWD/../ciphers/build-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/libciphers.a

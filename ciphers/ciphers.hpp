@@ -142,3 +142,11 @@ namespace hill {
 namespace vernam {
     wstring encode(wstring const& message, wstring key);
 }
+
+namespace xor_cipher {
+    class KeyDoesNotMatchMessage : public exception {};
+
+    wstring encode(wstring const& message, wstring const& key);
+    wstring decode(wstring const& code, wstring const& key);
+    wstring generate_key(size_t length, wchar_t seed, wchar_t multiplier, wchar_t increment);
+}

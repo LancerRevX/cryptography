@@ -61,27 +61,6 @@
        <string>Симметричные шифры</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="0">
-        <widget class="QPushButton" name="albertiDiskButton">
-         <property name="text">
-          <string>Диск Альберти</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Решётка Кардано</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QPushButton" name="PlayfairButton">
-         <property name="text">
-          <string>Шифр Плейфера</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QPushButton" name="polybiusSquareButton">
          <property name="sizePolicy">
@@ -92,26 +71,6 @@
          </property>
          <property name="text">
           <string>Квадрат Полибия</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="richelieuButton">
-         <property name="text">
-          <string>Шифр Ришельё</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="atbashButton">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Атбаш</string>
          </property>
         </widget>
        </item>
@@ -128,10 +87,10 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
-        <widget class="QPushButton" name="GronsveldButton">
+       <item row="5" column="1">
+        <widget class="QPushButton" name="VernamButton">
          <property name="text">
-          <string>Шифр Гронсвельда</string>
+          <string>Шифр Вернама</string>
          </property>
         </widget>
        </item>
@@ -148,10 +107,17 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
-        <widget class="QPushButton" name="VigenereButton">
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton">
          <property name="text">
-          <string>Шифр Виженера</string>
+          <string>Решётка Кардано</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="albertiDiskButton">
+         <property name="text">
+          <string>Диск Альберти</string>
          </property>
         </widget>
        </item>
@@ -162,10 +128,51 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="1">
-        <widget class="QPushButton" name="VernamButton">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="atbashButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string>Шифр Вернама</string>
+          <string>Атбаш</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="VigenereButton">
+         <property name="text">
+          <string>Шифр Виженера</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="PlayfairButton">
+         <property name="text">
+          <string>Шифр Плейфера</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="richelieuButton">
+         <property name="text">
+          <string>Шифр Ришельё</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="GronsveldButton">
+         <property name="text">
+          <string>Шифр Гронсвельда</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="xorCipherButton">
+         <property name="text">
+          <string>Метод гаммирования</string>
          </property>
         </widget>
        </item>

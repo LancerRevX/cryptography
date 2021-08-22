@@ -38,6 +38,8 @@ private slots:
 
     void on_FrequencyAnalysisButton_clicked();
 
+    void on_xorCipherButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };

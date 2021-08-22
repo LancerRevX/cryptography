@@ -20,10 +20,11 @@ add_library(ciphers STATIC
     ciphers.hpp
     hill.cpp
     vernam.cpp
+    xor_cipher.cpp
 )
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)
 link_directories(matrix/)
-target_link_libraries(ciphers PUBLIC C:/Users/nikit/Documents/Projects/cryptography/ciphers/matrix/libmatrix.a)
+target_link_libraries(ciphers PUBLIC C:/Users/nikitakirenkov/Projects/cryptography/ciphers/matrix/libmatrix.a)
 
 include(FetchContent)
 FetchContent_Declare(
