@@ -12,6 +12,9 @@ public:
     };
 
     struct SymbolInfo {
+        SymbolInfo() {
+
+        }
         SymbolInfo(Alphabet alphabet, QChar symbol, double average_frequency)
             : alphabet(alphabet), symbol(symbol), average_frequency(average_frequency)
         {

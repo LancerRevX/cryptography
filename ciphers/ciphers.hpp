@@ -150,3 +150,13 @@ namespace xor_cipher {
     wstring decode(wstring const& code, wstring const& key);
     wstring generate_key(size_t length, wchar_t seed, wchar_t multiplier, wchar_t increment);
 }
+
+namespace des {
+    class InvalidKey : public exception {};
+
+    wstring encode(wstring const& message, vector<bool> const& key);
+
+    vector<bool> message_to_bits(wstring const& message);
+    vector<bool> feistel_function(vector<bool> const& R, vector<bool> const& k);
+    vector<bool> exclusive_or(vector<bool> const& left, vector<bool> const& right);
+}

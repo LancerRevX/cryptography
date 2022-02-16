@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     tabs/albertidisk.cpp \
+    tabs/des.cpp \
     tabs/frequency_analysis/frequency_analysis.cpp \
     tabs/frequency_analysis/symbols_table_model.cpp \
     tabs/gronsveld.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
 HEADERS += \
     mainwindow.hpp \
     tabs/albertidisk.hpp \
+    tabs/des.hpp \
     tabs/frequency_analysis/frequency_analysis.hpp \
     tabs/frequency_analysis/symbols_table_model.hpp \
     tabs/gronsveld.hpp \
@@ -50,6 +52,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui \
     tabs/albertidisk.ui \
+    tabs/des.ui \
     tabs/frequency_analysis/frequency_analysis.ui \
     tabs/gronsveld.ui \
     tabs/hill.ui \

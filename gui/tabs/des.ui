@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DES</class>
+ <widget class="QWidget" name="DES">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>324</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="2" rowspan="3">
+    <widget class="QPlainTextEdit" name="codeEdit"/>
+   </item>
+   <item row="4" column="3">
+    <widget class="QPushButton" name="decodeButton">
+     <property name="text">
+      <string>Расшифровать</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="encodeButton">
+     <property name="text">
+      <string>Зашифровать</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="messageLabel">
+     <property name="text">
+      <string>Сообщение</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" rowspan="3">
+    <widget class="QPlainTextEdit" name="messageEdit"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="keyLabel">
+     <property name="text">
+      <string>Ключ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QPushButton" name="loadCodeButton">
+     <property name="text">
+      <string>Загрузить из файла</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="codeLabel">
+     <property name="text">
+      <string>Криптограмма</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QPushButton" name="loadMessageButton">
+     <property name="text">
+      <string>Загрузить из файла</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <widget class="QLineEdit" name="keyEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

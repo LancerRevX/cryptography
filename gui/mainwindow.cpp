@@ -14,6 +14,7 @@
 #include "tabs/hill.hpp"
 #include "tabs/vernam.hpp"
 #include "tabs/xorcipher.hpp"
+#include "tabs/des.hpp"
 
 #include "tabs/frequency_analysis/frequency_analysis.hpp"
 
@@ -108,6 +109,13 @@ void MainWindow::on_FrequencyAnalysisButton_clicked()
 void MainWindow::on_xorCipherButton_clicked()
 {
     auto window = new XorCipher();
+    window->show();
+    window->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::on_desButton_clicked()
+{
+    auto window = new DES();
     window->show();
     window->setAttribute(Qt::WA_DeleteOnClose);
 }

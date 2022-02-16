@@ -21,6 +21,7 @@ add_library(ciphers STATIC
     hill.cpp
     vernam.cpp
     xor_cipher.cpp
+    des.cpp
 )
 target_compile_definitions(ciphers PRIVATE CIPHERS_LIBRARY)
 link_directories(matrix/)

@@ -40,6 +40,8 @@ private slots:
 
     void on_xorCipherButton_clicked();
 
+    void on_desButton_clicked();
+
 private:
     Ui::MainWindow* ui;
 };
